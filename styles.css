@@ -19,12 +19,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
     height: 100vh;
     background-color: var(--prim-darkblue-bg);
 }
 
 button {
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     border-radius: 10px;
 }
@@ -35,9 +36,9 @@ button {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    height: 700px;
-    width: 70%;
-    min-width: 500px;
+    height: 510px;
+    min-width: 365px;
+    max-width: 730px;
     background-color: var(--prim-blue-bg);
     border-radius: 20px;
 }
@@ -61,8 +62,36 @@ button {
 }
 
 .sketch {
-    margin: 22px auto;
-    width: 425px;
-    height: 425px;
+    margin: 18px auto;
+    width: 300px;
+    height: 300px;
     background-color: white;
+}
+
+@media (min-width: 730px) {
+    .container {
+        flex-direction: row;
+        height: 515px;
+    }
+
+    .sketch-options {
+        width:30%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+    
+    .sketch-area {
+        width: 70%;
+        height: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .sketch {
+        width: 450px;
+        height: 450px;
+    }
 }
