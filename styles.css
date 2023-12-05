@@ -25,11 +25,11 @@ body {
     background-color: var(--prim-darkblue-bg);
 }
 
-button {
+/* button {
     width: 70%;
     margin: 20px auto;
     border-radius: 10px;
-}
+} */
 
 .container {
     display: flex;
@@ -45,7 +45,9 @@ button {
 }
 
 .sketch-options {
-    display: block;
+    display: flex;
+    align-items: center;
+    padding: 20px;
     width:100%;
     height: 30%;
     background-color: var(--prim-lightblue);
@@ -54,7 +56,9 @@ button {
 }
 
 .sketch-area {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 70%;
     background-color: var(--prim-darkblue-bg);
@@ -63,10 +67,48 @@ button {
 }
 
 .sketch {
-    margin: 18px auto;
+    /* margin: 18px auto; */
+    display: flex;
+    flex-wrap: wrap;
     width: 300px;
     height: 300px;
     background-color: white;
+}
+
+.square {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    background-color: palevioletred;
+    opacity: 0;
+}
+
+/* Animations */
+
+.fade-in {
+    opacity: 0;
+    animation: 2s forwards fadeIn;
+}
+
+.fade-out {
+    animation: 2s forwards fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @media (min-width: 730px) {
