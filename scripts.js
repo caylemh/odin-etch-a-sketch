@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerElement = document.querySelector('.sketch')
     const changeSizeBtn = document.querySelector('.changeButton')
     const newColor = document.querySelector('#newColor')
+    const heading = document.querySelector('h1')
 
     let gridSize = 16
     const defaultColor = '#d87093'
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Change the color of the square
     function colorChange() {
         newColor.value = defaultColor
-        console.log(newColor.value);
+        heading.style.color = defaultColor
         newColor.addEventListener("input", updateFirst, false)
         newColor.addEventListener("change", updateAll, false)
         newColor.select()
@@ -18,12 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const squares = document.querySelectorAll('.square')
             if (squares) {
                 squares.style.backgroundColor = event.target.value;
+                heading.style.color = event.target.value;
             }
         }
     
         function updateAll(event) {
             document.querySelectorAll('.square').forEach((square) => {
               square.style.backgroundColor = event.target.value;
+              heading.style.color = event.target.value;
             });
         }
     }
